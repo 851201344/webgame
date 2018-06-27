@@ -1,0 +1,153 @@
+body {
+    background-color: #F6F6F6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.panel {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 400px;
+    background-color: antiquewhite;
+}
+
+.panel-title {
+    text-align: center;
+    height: 30px;
+    width: 400px;
+}
+
+.panel-body {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border: 5px solid antiquewhite;
+}
+
+.panel-body-cell {
+    float: left;
+    background-color: #fff;
+    width: 25%;
+    height: 25%;
+    border: 5px solid antiquewhite;
+}
+
+.panel-body-square-parent {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.panel-body-square {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.n2 {
+    background-color: #e9e7ef;
+}
+
+.n2 span {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    line-height: 100%;
+    top: 50%;
+    margin-top: -0.5em;
+}
+
+.p00 {
+    top: 0;
+    left: 0;
+}
+
+.p01 {
+    top: 0;
+    left: 25%;
+}
+
+.p02 {
+    top: 0;
+    left: 50%;
+}
+
+.p03 {
+    top: 0;
+    left: 75%;
+}
+
+.p10 {
+    top: 25%;
+    left: 0;
+}
+
+.p11 {
+    top: 25%;
+    left: 25%;
+}
+
+.p12 {
+    top: 25%;
+    left: 50%;
+}
+
+.p13 {
+    top: 25%;
+    left: 75%;
+}
+
+.p20 {
+    top: 50%;
+    left: 0;
+}
+
+.p21 {
+    top: 50%;
+    left: 25%;
+}
+
+.p22 {
+    top: 50%;
+    left: 50%;
+}
+
+.p23 {
+    top: 50%;
+    left: 75%;
+}
+
+.p30 {
+    top: 75%;
+    left: 0;
+}
+
+.p31 {
+    top: 75%;
+    left: 25%;
+}
+
+.p32 {
+    top: 75%;
+    left: 50%;
+}
+
+.p33 {
+    top: 75%;
+    left: 75%;
+}
