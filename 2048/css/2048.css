@@ -62,7 +62,11 @@ body {
     background-color: #e9e7ef;
 }
 
-.n2 span {
+.n4 {
+    background-color: rebeccapurple;
+}
+
+.panel-body-square span {
     position: absolute;
     display: block;
     text-align: center;
