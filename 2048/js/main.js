@@ -26,7 +26,7 @@ $(document).keydown(function (event) {
             moveright();
             console.log(array)
             break;
-        case 40: //下
+        case 40: //下 
             movedown();
             break;
         default:
