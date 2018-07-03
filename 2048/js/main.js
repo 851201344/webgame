@@ -17,16 +17,16 @@ for (let i = 0; i < 4; i++) {
 
 var disabledkey = true;
 var totalscore = 0;
-var moved = false;//用来判断 方块是否移动过
+var moved = false; //用来判断 方块是否移动过
 
 
 $(function () {
-    // init();
-    // init();
-    createDom(0, 3, 2)
-    createDom(1, 3, 2)
-    createDom(2, 3, 4)
-    createDom(3, 3, 8)
+    init();
+    init();
+    // createDom(0, 3, 2)
+    // createDom(1, 3, 2)
+    // createDom(2, 3, 4)
+    // createDom(3, 3, 8)
 })
 $(document).keydown(function (event) {
     var keyNum = event.which; //获取键值
