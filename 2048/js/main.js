@@ -21,58 +21,44 @@ var moved = false; //用来判断 方块是否移动过
 
 
 $(function () {
-    init();
-    init();
-    // createDom(0, 3, 2)
-    // createDom(1, 3, 2)
+    // init();
+    // init();
+    createDom(0, 1, 2)
+    createDom(0, 2, 4)
     // createDom(2, 3, 4)
     // createDom(3, 3, 8)
 })
+
+function opertion(func) {
+    disabledkey = false;
+    setArrayReset();
+    func();
+    creatNew();
+    end();
+    disabledkey = true;
+
+}
 $(document).keydown(function (event) {
     var keyNum = event.which; //获取键值
     if (disabledkey) {
         switch (keyNum) { //判断按键
             case 37: //左
-                setArrayReset();
-                moveleft();
-                creatNew();
-                end();
-                disabledkey = false;
-
+                opertion(moveleft)
                 break;
             case 38: // 上
-                setArrayReset();
-                movetop();
-                creatNew();
-                end();
-                disabledkey = false;
+                opertion(movetop)
+
                 break;
             case 39: //右
-                setArrayReset();
-                moveright();
-                creatNew();
-                // createDom(1, 2, 16)
-
-                end();
-                disabledkey = false;
+                opertion(moveright)
                 break;
             case 40: //下 
-                setArrayReset();
-                movedown();
-                creatNew();
-                end();
-                disabledkey = false;
+                opertion(movedown)
                 break;
             default:
                 break;
         }
     }
-
-    setTimeout(() => {
-        disabledkey = true;
-    }, 400);
-
-
 });
 
 
@@ -118,7 +104,7 @@ function end() {
     if (end) {
         setTimeout(function () {
             alert("game over!");
-        }, 500);
+        }, 300);
 
     }
 }
@@ -164,7 +150,6 @@ function init() {
 //生成一个新的dom
 function createDom(i, j, custom) {
     array[i][j].p = "p" + i + j;
-    array[i][j].oldp = "p" + i + j;
     array[i][j].dom = $(`
                     <div class="panel-body-square-parent">
                         <div class="panel-body-square">
@@ -181,21 +166,18 @@ function createDom(i, j, custom) {
     array[i][j].number = num;
     array[i][j].dom.find(".panel-body-square").addClass("n" + num);
     array[i][j].dom.find(".panel-body-square").find("span").html(num)
-
-    setTimeout(function () {
-        $(".panel-body").append(array[i][j].dom)
-    }, 300);
+    $(".panel-body").append(array[i][j].dom)
 
 }
 
 //predom 前一个dom
 //dom 当前dom
 function merge(preitem, item) {
-    if (preitem.number == item.number && (preitem.ismerge == false || preitem.ismerge == undefined)) { //如果值相同 去掉前边的  
+    if (preitem.number == item.number && preitem.ismerge == false) { //如果值相同 去掉前边的  
         var removeDom = preitem.dom;
         setTimeout(function () {
             removeDom.remove()
-        }, 500); //移除之前的dom
+        }, 200); //移除之前的dom
         //新的dom 添加样式以及改变文字
         item.dom.find(".panel-body-square").removeClass("n" + item.number).addClass("n" + item.number * 2).find("span").html(item.number * 2);
         totalscore += item.number * 2;

@@ -49,7 +49,7 @@ body {
   width: 25%;
   height: 25%;
   padding: 5px;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .panel-body-square {
@@ -72,14 +72,17 @@ body {
   background-color: #f5f5dc;
   z-index: 8;
 }
+
 .n16 {
   background-color: #deb887;
   z-index: 16;
 }
+
 .n32 {
   background-color: #5f9ea0;
   z-index: 32;
 }
+
 .n64 {
   background-color: #ff7f50;
   z-index: 64;
@@ -99,10 +102,12 @@ body {
   background-color: #ff1493;
   z-index: 512;
 }
+
 .n1024 {
   background-color: #fafad2;
   z-index: 1024;
 }
+
 .n2048 {
   background-color: #fffacd;
   z-index: 2048;
